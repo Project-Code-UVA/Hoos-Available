@@ -1,0 +1,152 @@
+body {
+    text-align: center;
+    font-family: sans-serif;
+    background-color: #232D4B;
+}
+
+h1 {
+    font-size: 3em;
+}
+.title {
+    display: inline-block;
+}
+.logo {
+    padding: 20px;
+
+}
+
+.top-container  {
+    margin-top: 7vh;
+    color: white;
+    text-shadow: 0 0 0.5vw #F84C1E;
+}
+
+.top-container input[type=text] {
+    margin: 4vh 0 0 17%;
+    padding: 11px;
+    font-size: 16px;
+    border: 1px solid grey;
+    float: left;
+    width: 60%;
+    background: #f1f1f1;
+}
+
+.top-container button {
+    margin-top: 4vh;
+    float: left;
+    padding: 10px;
+
+    background-color: lightblue;
+    font-size: 17px;
+    border: 1px solid grey;
+    border-left: none;
+    cursor: pointer;
+}
+
+
+.boxes-container    {
+    margin-top: 12%;
+    height: 8vh;
+    display: flex;
+    justify-content: center;
+}
+
+.box-button-icon    {
+    height: 5vw;
+    width: 5vw;
+    padding-bottom: 3vh;
+    margin-top: -5vh;
+}
+
+.box-text   {
+    text-underline-offset:unset;
+    color:black;
+    text-decoration: none;
+}
+
+.box-left {
+    display: inline-flexbox;
+    color: white;
+    font-size: larger;
+    text-decoration: none;
+    background-color: white;
+    width: 8%;
+    height: 100%;
+    margin-right: 7%;
+    padding: 5.5%;
+    box-shadow: 0.2vw 0.3vh 0.8vw 0.7vh grey;
+    transition: 0.3s;
+}
+
+
+.box-right {
+    display: inline-flexbox;
+    color: white;
+    font-size: larger;
+    text-decoration: none;
+    background-color: white;
+    width: 8%;
+    height: 100%;
+    padding: 5.5%;
+    margin-left: 7%;
+    box-shadow: 0.2vw 0.3vh 0.8vw 0.7vh grey;
+    transition: 0.3s;
+}
+
+.box-left:hover {
+    background-color: #F84C1E;
+    cursor: pointer;
+}
+
+.box-right:hover {
+    background-color: #F84C1E;
+    cursor: pointer;
+}
+.department-container    {
+    margin-top: 25%;
+    height: 6vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+select {
+    margin: 0.5px;
+    width: 1000px;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid darkblue;
+    border-radius: 8px;
+    background-color: #FFFFFF;
+    font-family: sans-serif;
+    cursor: pointer;
+    text-shadow: 0 0 0.01vw #F84C1E;
+  }  
+  option {
+    font-size: 16px;
+    font-family: sans-serif;
+    background-color: #FFFFFF;
+    cursor: pointer;
+  }
+
+  .courses-option-container{
+    margin-top: 3%;
+    height: 6vh;
+    display: flex;
+    flex-direction:row;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .course-list{
+    margin: 0.5px;
+    width: 1350px;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid darkblue;
+    border-radius: 8px;
+    background-color: #FFFFFF;
+    font-family: sans-serif;
+    cursor: pointer;
+    text-shadow: 0 0 0.01vw #F84C1E;
+  }
