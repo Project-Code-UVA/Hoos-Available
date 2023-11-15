@@ -65,7 +65,7 @@ h1 {
 }
 
 .box-left {
-    display: inline-flexbox;
+    display: -ms-inline-flexbox;
     color: white;
     font-size: larger;
     text-decoration: none;
@@ -80,7 +80,7 @@ h1 {
 
 
 .box-right {
-    display: inline-flexbox;
+    display: -ms-inline-flexbox;
     color: white;
     font-size: larger;
     text-decoration: none;
