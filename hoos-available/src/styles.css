@@ -1,14 +1,17 @@
 body {
     text-align: center;
     font-family: sans-serif;
-    background-color: #232D4B;
+    background-color: #232D4B !important;
 }
 
+
 h1 {
-    font-size: 3em;
+    font-size: 4em;
 }
 .title {
-    display: inline-block;
+    display: block;
+    padding:20px;
+    font-size: 4em;
 }
 .logo {
     padding: 20px;
@@ -19,6 +22,7 @@ h1 {
     margin-top: 7vh;
     color: white;
     text-shadow: 0 0 0.5vw #F84C1E;
+    text-align: center;
 }
 
 .top-container input[type=text] {
@@ -54,14 +58,15 @@ h1 {
 .box-button-icon    {
     height: 5vw;
     width: 5vw;
-    padding-bottom: 3vh;
-    margin-top: -5vh;
+    padding-bottom: 1vh;
+    margin-top: -8vh;
 }
 
 .box-text   {
     text-underline-offset:unset;
     color:black;
     text-decoration: none;
+
 }
 
 .box-left {
@@ -70,7 +75,8 @@ h1 {
     font-size: larger;
     text-decoration: none;
     background-color: white;
-    width: 8%;
+    text-align: center;
+    width: 15%;
     height: 100%;
     margin-right: 7%;
     padding: 5.5%;
@@ -85,7 +91,8 @@ h1 {
     font-size: larger;
     text-decoration: none;
     background-color: white;
-    width: 8%;
+    text-align: center;
+    width: 15%;
     height: 100%;
     padding: 5.5%;
     margin-left: 7%;
@@ -103,9 +110,8 @@ h1 {
     cursor: pointer;
 }
 .department-container    {
-    margin-top: 25%;
+    margin-top: 10%;
     height: 6vh;
-    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -150,3 +156,5 @@ select {
     cursor: pointer;
     text-shadow: 0 0 0.01vw #F84C1E;
   }
+
+

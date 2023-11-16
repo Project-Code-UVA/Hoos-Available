@@ -12,14 +12,13 @@
     <input type="text" class="userInput" onkeyup="searchByDept()" placeholder="Search for department..."/>
     <script>
       function searchByDept(){
-        var input, filter, deptContainer, departments, curElem, i, textVal;
-        input = document.getElementsByClassName("userInput");
-        filter = input.value.toUpperCase();
-        deptContainer = document.getElementsByClassName("department-container");
-        departments = deptContainer.getElementsByTagName("select");
-        for(i=0; i<departments.length; i++){
-          curElem=departments[i];
-          textVal = curElem.className;
+          let input = document.getElementsByClassName("userInput");
+        let filter = input.value.toUpperCase();
+        let deptContainer = document.getElementsByClassName("department-container");
+        let departments = deptContainer.getElementsByTagName("select");
+        for(let i=0; i<departments.length; i++){
+         let curElem=departments[i];
+          let textVal = curElem.className;
           if(textVal.toUpperCase().indexOf(filter) > -1)
             departments[i].style.display="";
           else
