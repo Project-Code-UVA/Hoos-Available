@@ -6,6 +6,7 @@ import BrowseCourses from "./BrowseCourses";
 
 
 
+
 function App() {
     return (
         <Router>

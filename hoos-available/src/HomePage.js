@@ -1,7 +1,6 @@
 import React from 'react';
-import './styles.css';
 import {Link} from "react-router-dom";
-
+import "./styles.css";
 
 
 const HomePage = () => {
@@ -24,14 +23,14 @@ const HomePage = () => {
                     </button>
                 </div>
                 <div className="boxes-container">
-                    <div className="box-left">
+                    <Link to={"./FindProfessor"} className="box-left">
                         <img className="box-button-icon" src={require("./images/Iconsmind-Outline-Professor.ico")}/>
-                        <Link to={"./FindProfessor"} className="box-text">Find Professors</Link>
-                    </div>
-                    <div className="box-right">
+                        <span className="box-text">Find Professors</span>
+                    </Link>
+                    <Link to={"./BrowseCourses"} className="box-right">
                         <img className="box-button-icon" src={require("./images/book-outline.png")}/>
-                        <Link to={"./BrowseCourses"} className="box-text">Browse Courses</Link>
-                    </div>
+                        <span className="box-text">Browse Courses</span>
+                    </Link>
                 </div>
             </body>
         </div>
