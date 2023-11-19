@@ -8,7 +8,7 @@ Setting up React
 
 General Info about React Project Structure
 ------------------------------------------
-*All of the main project files are in the hoos-available folder. The additional html files outside include our previous work for reference. You don't need to worry about updating those files.
+* All of the main project files are in the hoos-available folder. The additional html files outside include our previous work for reference. You don't need to worry about updating those files. For example, if you want to work on the homepage, update HomePage.js at HoosAvailable>hoos.available>src>HomePage.js
 * The dependencies and libraries are in the package json files and the node_modules folder. You generally don't need to worry aobut these unless you want to install dependencies.
 * The main file that gets run is the App.js file. It has all the routing between pages. If you want to add new pages, you'll need to add it to the routing using <route> tags.
 * The index.js file is the file that is actually getting run upon startup. Some of the css and the React/ReactDOM are imported there.
