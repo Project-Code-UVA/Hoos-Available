@@ -1,5 +1,4 @@
-# Hoos-Available
-Project Code Hoos Available
+# Project Code: Hoos-Available
 
 Setting up React
 ----------------
