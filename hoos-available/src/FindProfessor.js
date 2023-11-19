@@ -1,6 +1,22 @@
 import React from 'react';
 import Accordion from 'react-bootstrap/Accordion';
 import './styles.css';
+
+/*function searchByDept() {
+    const input = document.querySelector("input");
+    var filter, deptContainer, departments, curElem, textVal, i;
+    filter = input.value.toUpperCase();
+    deptContainer = document.getElementById("department-container")
+    departments = deptContainer.getElementsByTagName("Accordion.Header");
+    for (i = 0; i < departments.length; i++) {
+        curElem = departments[i];
+        textVal = curElem.className;
+        if (textVal.toUpperCase().indexOf(filter) > -1)
+            departments[i].style.display = "";
+        else
+            departments[i].style.display = "none";
+    }
+}*/
 const FindProfessor = () =>{
     return(
         <>
@@ -13,8 +29,8 @@ const FindProfessor = () =>{
             <div className="top-container">
                 <h1 className="professor-title">Find Professors By Department</h1>
             </div>
-            </body>
-            <Accordion className="department-container">
+            <input type="text" id="userInput" /*onKeyUp={searchByDept()}*/ placeholder="Search for department..."/>
+            <Accordion id="department-container">
                 <Accordion.Item eventKey="0">
                     <Accordion.Header>African American and African Studies</Accordion.Header>
                     <Accordion.Body>
@@ -128,7 +144,7 @@ const FindProfessor = () =>{
                     </Accordion.Body>
                 </Accordion.Item>
             </Accordion>
-
+            </body>
         </>
     );
 }
