@@ -3,6 +3,7 @@ import {BrowserRouter as Router, Navigate, Route, Routes} from "react-router-dom
 import HomePage from "./HomePage";
 import FindProfessor from "./FindProfessor";
 import BrowseCourses from "./BrowseCourses";
+import ProfilePage from "./ProfilePage";
 
 
 
@@ -21,6 +22,8 @@ function App() {
                     path="*"
                     element={<Navigate to="/" />}
                 />
+                <Route path="/ProfilePage"
+                        element={<ProfilePage/>}/>
             </Routes>
         </Router>
     );
