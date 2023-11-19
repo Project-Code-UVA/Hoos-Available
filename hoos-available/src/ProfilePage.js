@@ -6,7 +6,7 @@ const ProfessorProfile = () => {
     useEffect(() => {
         // Dynamically load Google Maps API script
         const script = document.createElement('script');
-        script.src = `https://maps.googleapis.com/maps/api/js?key=AIzaSyA0U9vtW0IuL_Bm1xQIkW34WxtL_yMgpVw&callback=initMap`;
+        script.src = `https://maps.googleapis.com/maps/api/js?key=API_KEY&callback=initMap`;
         script.async = true;
         script.defer = true;
 
