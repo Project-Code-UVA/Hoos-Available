@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import './ProfessorProfile.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import profPicture from './images/profile-picture.png'
 
 const ProfessorProfile = () => {
     useEffect(() => {
@@ -60,7 +61,7 @@ const ProfessorProfile = () => {
     return (
         <div className="professor-profile">
             <div className="side-panel">
-                <div className="professor-img"></div>
+                <img src={profPicture} width='50%'></img>
                 <div className="contact-info">
                     <h1>Professor Name</h1>
                     <h4>Contact Information</h4>
