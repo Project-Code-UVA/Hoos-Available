@@ -1,6 +1,13 @@
-body {
+.boxsections-body {
     text-align: center;
     font-family: sans-serif;
+    height: 100%;
+    background-color: #232D4B !important;
+}
+.home-body {
+    text-align: center;
+    font-family: sans-serif;
+    height: 100vh;
     background-color: #232D4B !important;
 }
 
@@ -128,7 +135,8 @@ select {
     cursor: pointer;
     text-shadow: 0 0 0.01vw #F84C1E;
   }
-  option {
+  .Professor {
+      display: block;
     font-size: 16px;
     font-family: sans-serif;
     background-color: #FFFFFF;
@@ -157,7 +165,5 @@ select {
     text-shadow: 0 0 0.01vw #F84C1E;
   }
 
- {
-    background-color: blue;
-}
+
 

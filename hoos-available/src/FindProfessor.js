@@ -1,9 +1,13 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import Accordion from 'react-bootstrap/Accordion';
 import './styles.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import {Link} from "react-router-dom";
+
 
 
 const FindProfessor = () => {
+
         const renderList = (entry) => {
             if(entry.name.toLowerCase().includes(filter.toLowerCase()) || filter === '')
             return (
@@ -11,9 +15,9 @@ const FindProfessor = () => {
                     <Accordion.Item eventKey={entry.id}>
                         <Accordion.Header id={entry.name}>{entry.name}</Accordion.Header>
                         <Accordion.Body>
-                            <option className="Professor"> Professor 1</option>
-                            <option className="Professor"> Professor 2</option>
-                            <option className="Professor"> Professor 3</option>
+                            <Link to={"/ProfilePage"} className="Professor"> Professor 1</Link>
+                            <Link to={"/ProfilePage"} className="Professor"> Professor 2</Link>
+                            <Link to ={"/ProfilePage"} className="Professor"> Professor 3</Link>
                         </Accordion.Body>
                     </Accordion.Item>
 
@@ -44,9 +48,8 @@ const FindProfessor = () => {
             <head>
                 <meta charSet="UTF-8" />
                 <title>Homepage</title>
-                <link rel="stylesheet" href="./styles.css" />
             </head>
-            <body>
+            <body className="boxsections-body">
             <div className="top-container">
                 <h1 className="professor-title">Find Professors By Department</h1>
             </div>
@@ -55,8 +58,7 @@ const FindProfessor = () => {
                    value = {filter}
                    onChange = {event => setFilter(event.target.value)}
                    placeholder="Search for department..."/>
-
-            <Accordion id="department-container">
+            <Accordion id="department-container" className="p-3">
                 {items}
             </Accordion>
             </body>
