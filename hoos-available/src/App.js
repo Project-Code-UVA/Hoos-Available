@@ -18,12 +18,12 @@ function App() {
                        element={<BrowseCourses/>}/>
                 <Route path="/FindProfessor"
                        element={<FindProfessor/>}/>
+                <Route path="/ProfilePage"
+                       element={<ProfilePage/>}/>
                 <Route
                     path="*"
-                    element={<Navigate to="/" />}
+                    element={<Navigate to="./" />}
                 />
-                <Route path="/ProfilePage"
-                        element={<ProfilePage/>}/>
             </Routes>
         </Router>
     );

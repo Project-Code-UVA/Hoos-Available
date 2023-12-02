@@ -6,7 +6,7 @@ const BrowseCourses = () => {
         <>
             <meta charSet="UTF-8"/>
             <title>Homepage</title>
-            <link rel="stylesheet" href="hoos-available/src/styles.css"/>
+            <body className="boxsections-body">
             <div className="top-container">
                 <h1 className="professor-title">Browse Courses</h1>
             </div>
@@ -82,6 +82,7 @@ const BrowseCourses = () => {
                 <div className="course">Economics</div>
                 <button className="courseButton"> View Department Courses</button>
             </div>
+            </body>
         </>
     );
 }

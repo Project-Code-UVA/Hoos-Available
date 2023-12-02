@@ -5,13 +5,12 @@ import "./styles.css";
 
 const HomePage = () => {
     return (
-        <div>
+        <>
             <head>
                 <meta charSet="UTF-8" />
                 <title>Homepage</title>
-                <link rel="stylesheet" href="./styles.css" />
             </head>
-            <body>
+            <body className="home-body">
                 <div className="top-container">
                     <div className="uva-logo">
                         <img src={require("./images/vsabre.png")} width="15%" />
@@ -23,17 +22,17 @@ const HomePage = () => {
                     </button>
                 </div>
                 <div className="boxes-container">
-                    <Link to={"./FindProfessor"} className="box-left">
+                    <Link to={"/FindProfessor"} className="box-left">
                         <img className="box-button-icon" src={require("./images/Iconsmind-Outline-Professor.ico")}/>
                         <span className="box-text">Find Professors</span>
                     </Link>
-                    <Link to={"./BrowseCourses"} className="box-right">
+                    <Link to={"/BrowseCourses"} className="box-right">
                         <img className="box-button-icon" src={require("./images/book-outline.png")}/>
                         <span className="box-text">Browse Courses</span>
                     </Link>
                 </div>
             </body>
-        </div>
+        </>
     );
 };
 
