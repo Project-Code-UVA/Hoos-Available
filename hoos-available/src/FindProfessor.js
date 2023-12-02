@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react';
+import React, {useState} from 'react';
 import Accordion from 'react-bootstrap/Accordion';
 import './styles.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -7,9 +7,8 @@ import {Link} from "react-router-dom";
 
 
 const FindProfessor = () => {
-
-        const renderList = (entry) => {
-            if(entry.name.toLowerCase().includes(filter.toLowerCase()) || filter === '')
+    const renderList = (entry) => {
+        if (entry.name.toLowerCase().includes(filter.toLowerCase()) || filter === '')
             return (
                 <>
                     <Accordion.Item eventKey={entry.id}>
@@ -17,13 +16,13 @@ const FindProfessor = () => {
                         <Accordion.Body>
                             <Link to={"/ProfilePage"} className="Professor"> Professor 1</Link>
                             <Link to={"/ProfilePage"} className="Professor"> Professor 2</Link>
-                            <Link to ={"/ProfilePage"} className="Professor"> Professor 3</Link>
+                            <Link to={"/ProfilePage"} className="Professor"> Professor 3</Link>
                         </Accordion.Body>
                     </Accordion.Item>
 
                 </>
             )
-        }
+    }
     const departments = [
         {name: "African American and African Studies", id: "0"},
         {name: "American Sign Language Program", id: "1"},

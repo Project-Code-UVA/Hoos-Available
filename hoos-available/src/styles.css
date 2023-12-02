@@ -1,13 +1,13 @@
 .boxsections-body {
     text-align: center;
     font-family: sans-serif;
-    height: 100%;
+    min-height: 100vh;
     background-color: #232D4B !important;
 }
 .home-body {
     text-align: center;
     font-family: sans-serif;
-    height: 100vh;
+    min-height: 100vh;
     background-color: #232D4B !important;
 }
 
