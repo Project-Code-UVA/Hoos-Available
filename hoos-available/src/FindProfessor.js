@@ -7,12 +7,12 @@ import {Link} from "react-router-dom";
 
 
 const FindProfessor = () => {
-    const renderList = (entry) => {
-        if (entry.name.toLowerCase().includes(filter.toLowerCase()) || filter === '')
+    const renderList = (dept) => {
+        if (dept.name.toLowerCase().includes(filter.toLowerCase()) || filter === '')
             return (
                 <>
-                    <Accordion.Item eventKey={entry.id}>
-                        <Accordion.Header id={entry.name}>{entry.name}</Accordion.Header>
+                    <Accordion.Item eventKey={dept.id}>
+                        <Accordion.Header id={dept.name}>{dept.name}</Accordion.Header>
                         <Accordion.Body>
                             <Link to={"/ProfilePage"} className="Professor"> Professor 1</Link>
                             <Link to={"/ProfilePage"} className="Professor"> Professor 2</Link>
