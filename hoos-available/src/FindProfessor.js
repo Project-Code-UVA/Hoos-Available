@@ -56,7 +56,7 @@ const FindProfessor = () => {
                    id="userInput"
                    value = {filter}
                    onChange = {event => setFilter(event.target.value)}
-                   placeholder="Search for department..."/>
+                   placeholder="Search for departments"/>
             <Accordion id="department-container" className="p-3">
                 {items}
             </Accordion>
