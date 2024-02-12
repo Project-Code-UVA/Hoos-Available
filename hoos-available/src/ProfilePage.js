@@ -54,7 +54,8 @@ const ProfessorProfile = () => {
         // Cleanup function
         return () => {
             // Remove the event listener when the component unmounts
-            document.getElementById('emailButton').removeEventListener('click', emailButtonClickHandler);
+            if(document.getElementById('emailButton'))
+                document.getElementById('emailButton').removeEventListener('click', emailButtonClickHandler);
         };
     }, []); // Empty dependency array means this effect runs once when the component mounts
 
