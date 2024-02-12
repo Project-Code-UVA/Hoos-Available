@@ -4,7 +4,7 @@ import './styles.css';
 const BrowseCourses = () => {
     return (
         <>
-            <meta charSet="UTF-8"/>
+          <meta charSet="UTF-8"/>
             <title>Homepage</title>
             <body className="boxsections-body">
             <div className="top-container">

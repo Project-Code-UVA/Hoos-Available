@@ -1,14 +1,16 @@
 .boxsections-body {
     text-align: center;
     font-family: sans-serif;
-    height: 100%;
+    min-height: 100vh;
     background-color: #232D4B !important;
+
 }
 .home-body {
     text-align: center;
     font-family: sans-serif;
-    height: 100vh;
+    min-height: 100vh;
     background-color: #232D4B !important;
+
 }
 
 
@@ -26,7 +28,7 @@ h1 {
 }
 
 .top-container  {
-    margin-top: 7vh;
+    padding-top: 10px;
     color: white;
     text-shadow: 0 0 0.5vw #F84C1E;
     text-align: center;
@@ -116,6 +118,14 @@ h1 {
     background-color: #F84C1E;
     cursor: pointer;
 }
+#userInput{
+    margin: 4vh;
+    padding: 11px;
+    font-size: 16px;
+    border: 1px solid grey;
+    width: 60%;
+    background: #f1f1f1;
+}
 .department-container    {
     margin-top: 10%;
     height: 6vh;
@@ -141,6 +151,13 @@ select {
     font-family: sans-serif;
     background-color: #FFFFFF;
     cursor: pointer;
+      text-align: left;
+      text-decoration: none;
+      color: black;
+  }
+  .Professor:hover{
+      text-decoration: underline;
+      font-size: 18px;
   }
 
   .courses-option-container{
