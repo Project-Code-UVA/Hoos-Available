@@ -3,12 +3,14 @@
     font-family: sans-serif;
     min-height: 100vh;
     background-color: #232D4B !important;
+
 }
 .home-body {
     text-align: center;
     font-family: sans-serif;
     min-height: 100vh;
     background-color: #232D4B !important;
+
 }
 
 
@@ -26,7 +28,7 @@ h1 {
 }
 
 .top-container  {
-    margin-top: 7vh;
+    padding-top: 10px;
     color: white;
     text-shadow: 0 0 0.5vw #F84C1E;
     text-align: center;

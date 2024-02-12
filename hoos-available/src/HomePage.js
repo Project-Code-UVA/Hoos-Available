@@ -11,6 +11,7 @@ const HomePage = () => {
                 <title>Homepage</title>
             </head>
             <body className="home-body">
+
                 <div className="top-container">
                     <div className="uva-logo">
                         <img src={require("./images/vsabre.png")} width="15%" />
