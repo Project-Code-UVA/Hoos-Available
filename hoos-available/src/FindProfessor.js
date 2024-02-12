@@ -1,148 +1,64 @@
-import React from 'react';
+import React, {useState} from 'react';
 import Accordion from 'react-bootstrap/Accordion';
 import './styles.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import {Link} from "react-router-dom";
 
-/*function searchByDept() {
-    const input = document.querySelector("input");
-    var filter, deptContainer, departments, curElem, textVal, i;
-    filter = input.value.toUpperCase();
-    deptContainer = document.getElementById("department-container")
-    departments = deptContainer.getElementsByTagName("Accordion.Header");
-    for (i = 0; i < departments.length; i++) {
-        curElem = departments[i];
-        textVal = curElem.className;
-        if (textVal.toUpperCase().indexOf(filter) > -1)
-            departments[i].style.display = "";
-        else
-            departments[i].style.display = "none";
+
+
+const FindProfessor = () => {
+    const renderList = (dept) => {
+        if (dept.name.toLowerCase().includes(filter.toLowerCase()) || filter === '')
+            return (
+                <>
+                    <Accordion.Item eventKey={dept.id}>
+                        <Accordion.Header id={dept.name}>{dept.name}</Accordion.Header>
+                        <Accordion.Body>
+                            <Link to={"/ProfilePage"} className="Professor"> Professor 1</Link>
+                            <Link to={"/ProfilePage"} className="Professor"> Professor 2</Link>
+                            <Link to={"/ProfilePage"} className="Professor"> Professor 3</Link>
+                        </Accordion.Body>
+                    </Accordion.Item>
+
+                </>
+            )
     }
-}*/
-const FindProfessor = () =>{
+    const departments = [
+        {name: "African American and African Studies", id: "0"},
+        {name: "American Sign Language Program", id: "1"},
+        {name: "American Studies", id: "2"},
+        {name: "Anthropology", id: "3"},
+        {name: "Art", id: "4"},
+        {name: "Astronomy", id: "5"},
+        {name: "Biology", id: "6"},
+        {name: "Chemistry", id: "7"},
+        {name: "Classics", id: "8"},
+        {name: "Cognitive Science", id: "9"},
+        {name: "Creative Writing", id: "10"},
+        {name: "Drama", id: "11"},
+        {name: "East Asian Languages", id: "12"},
+        {name: "Economics", id: "13"}
+    ];
+        const [filter, setFilter] = useState('');
+
+    const items = departments.map((dept) => renderList(dept))
     return(
         <>
             <head>
                 <meta charSet="UTF-8" />
                 <title>Homepage</title>
-                <link rel="stylesheet" href="./styles.css" />
             </head>
-            <body>
+            <body className="boxsections-body">
             <div className="top-container">
                 <h1 className="professor-title">Find Professors By Department</h1>
             </div>
-            <input type="text" id="userInput" /*onKeyUp={searchByDept()}*/ placeholder="Search for department..."/>
-            <Accordion id="department-container">
-                <Accordion.Item eventKey="0">
-                    <Accordion.Header>African American and African Studies</Accordion.Header>
-                    <Accordion.Body>
-                        <option className="Professor"> Professor 1 </option>
-                        <option className="Professor"> Professor 2</option>
-                        <option className="Professor"> Professor 3 </option>
-                    </Accordion.Body>
-                </Accordion.Item>
-                <Accordion.Item eventKey="1">
-                    <Accordion.Header>American Sign Language Program</Accordion.Header>
-                    <Accordion.Body>
-                        <option className="Professor"> Professor 1 </option>
-                        <option className="Professor"> Professor 2</option>
-                        <option className="Professor"> Professor 3 </option>
-                    </Accordion.Body>
-                </Accordion.Item>
-                <Accordion.Item eventKey="2">
-                    <Accordion.Header>American Studies</Accordion.Header>
-                    <Accordion.Body>
-                        <option className="Professor"> Professor 1 </option>
-                        <option className="Professor"> Professor 2</option>
-                        <option className="Professor"> Professor 3 </option>
-                    </Accordion.Body>
-                </Accordion.Item>
-                <Accordion.Item eventKey="3">
-                    <Accordion.Header>Anthropology</Accordion.Header>
-                    <Accordion.Body>
-                        <option className="Professor"> Professor 1 </option>
-                        <option className="Professor"> Professor 2</option>
-                        <option className="Professor"> Professor 3 </option>
-                    </Accordion.Body>
-                </Accordion.Item>
-                <Accordion.Item eventKey="4">
-                    <Accordion.Header>Art</Accordion.Header>
-                    <Accordion.Body>
-                        <option className="Professor"> Professor 1 </option>
-                        <option className="Professor"> Professor 2</option>
-                        <option className="Professor"> Professor 3 </option>
-                    </Accordion.Body>
-                </Accordion.Item>
-                <Accordion.Item eventKey="5">
-                    <Accordion.Header>Astronomy</Accordion.Header>
-                    <Accordion.Body>
-                        <option className="Professor"> Professor 1 </option>
-                        <option className="Professor"> Professor 2</option>
-                        <option className="Professor"> Professor 3 </option>
-                    </Accordion.Body>
-                </Accordion.Item>
-                <Accordion.Item eventKey="6">
-                    <Accordion.Header>Biology</Accordion.Header>
-                    <Accordion.Body>
-                        <option className="Professor"> Professor 1 </option>
-                        <option className="Professor"> Professor 2</option>
-                        <option className="Professor"> Professor 3 </option>
-                    </Accordion.Body>
-                </Accordion.Item>
-                <Accordion.Item eventKey="7">
-                    <Accordion.Header>Chemistry</Accordion.Header>
-                    <Accordion.Body>
-                        <option className="Professor"> Professor 1 </option>
-                        <option className="Professor"> Professor 2</option>
-                        <option className="Professor"> Professor 3 </option>
-                    </Accordion.Body>
-                </Accordion.Item>
-                <Accordion.Item eventKey="8">
-                    <Accordion.Header>Classics</Accordion.Header>
-                    <Accordion.Body>
-                        <option className="Professor"> Professor 1 </option>
-                        <option className="Professor"> Professor 2</option>
-                        <option className="Professor"> Professor 3 </option>
-                    </Accordion.Body>
-                </Accordion.Item>
-                <Accordion.Item eventKey="9">
-                    <Accordion.Header>Cognitive Science</Accordion.Header>
-                    <Accordion.Body>
-                        <option className="Professor"> Professor 1 </option>
-                        <option className="Professor"> Professor 2</option>
-                        <option className="Professor"> Professor 3 </option>
-                    </Accordion.Body>
-                </Accordion.Item>
-                <Accordion.Item eventKey="10">
-                    <Accordion.Header>Creative Writing</Accordion.Header>
-                    <Accordion.Body>
-                        <option className="Professor"> Professor 1 </option>
-                        <option className="Professor"> Professor 2</option>
-                        <option className="Professor"> Professor 3 </option>
-                    </Accordion.Body>
-                </Accordion.Item>
-                <Accordion.Item eventKey="11">
-                    <Accordion.Header>Drama</Accordion.Header>
-                    <Accordion.Body>
-                        <option className="Professor"> Professor 1 </option>
-                        <option className="Professor"> Professor 2</option>
-                        <option className="Professor"> Professor 3 </option>
-                    </Accordion.Body>
-                </Accordion.Item>
-                <Accordion.Item eventKey="12">
-                    <Accordion.Header>East Asian Languages</Accordion.Header>
-                    <Accordion.Body>
-                        <option className="Professor"> Professor 1 </option>
-                        <option className="Professor"> Professor 2</option>
-                        <option className="Professor"> Professor 3 </option>
-                    </Accordion.Body>
-                </Accordion.Item>
-                <Accordion.Item eventKey="13">
-                    <Accordion.Header>Economics</Accordion.Header>
-                    <Accordion.Body>
-                        <option className="Professor"> Professor 1 </option>
-                        <option className="Professor"> Professor 2</option>
-                        <option className="Professor"> Professor 3 </option>
-                    </Accordion.Body>
-                </Accordion.Item>
+            <input type="text"
+                   id="userInput"
+                   value = {filter}
+                   onChange = {event => setFilter(event.target.value)}
+                   placeholder="Search for departments"/>
+            <Accordion id="department-container" className="p-3">
+                {items}
             </Accordion>
             </body>
         </>
